@@ -1,0 +1,121 @@
+span{
+    background-color: cyan;
+}
+.header1
+{
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    /* font-family: 'Girassol', cursive; */
+    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+    font-family: 'Inria Serif', serif;
+
+
+}
+h3{
+    padding-bottom: 17px;
+    /* font-family: 'Girassol', cursive; */
+    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
+    font-family: 'Inria Serif', serif;
+
+
+}
+header{
+    top:0;
+    position: sticky;
+    z-index: 5;
+    background-color:thistle;
+}
+.supersection1{
+    position: relative;
+    /* background-color:cornflowerblue ; */
+    text-align: center;
+    padding-top: 10px;
+    
+}
+.super2section1{
+    position: relative;
+    /* background-color:darkseagreen ; */
+    text-align: center;
+    padding-top: 5px;
+    margin-top: 20px;
+}
+.super3section2{
+    /* background-color: gold; */
+}
+.subsection1{
+    background-color: darkgoldenrod;
+    display: inline-block;
+    height: 150px;
+    width: 50%;
+    margin-left: -4px;
+}
+.sub2section1{
+    background-color:darkolivegreen;
+    display: inline-block;
+    height: 150px;
+    margin-left: -4px;
+    width: 50%;
+}
+.sub3section1
+{
+    background-color: crimson;
+    float: left;
+    height: 150px;
+    width: 50%;
+}
+.sub4section1
+{
+    background-color:darkviolet;
+    float: left;
+    height: 150px;
+    width: 50%;
+}
+.positionsuper1{
+    position: relative;
+    height: 200px;
+    background-color:tan;
+}
+.possub1{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background-color:teal;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+
+    
+    
+}
+.possub2{
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    background-color: navy;
+    bottom:7;
+    right: 7;
+   
+
+}
+.h3text{
+    top:50%;
+    left: 50%;
+    color: white;
+    text-align: center;
+    /* transform: translate(-50%,50%); */
+}
+.staticdiv{
+    position: static;
+    height: 100px;
+    /* padding-top: 30px; */
+    width:100px;
+    /* top:50%;
+    left:50%; */
+    background-color:fuchsia;
+    text-align: center;
+    display: inline-block;
+    color: white;
+}
