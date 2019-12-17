@@ -28,20 +28,23 @@ header{
 }
 .supersection1{
     position: relative;
-    /* background-color:cornflowerblue ; */
+    background-color:cornflowerblue ;
     text-align: center;
     padding-top: 10px;
+    margin-top: 20px;
     
 }
 .super2section1{
     position: relative;
-    /* background-color:darkseagreen ; */
+    background-color:darkseagreen ;
     text-align: center;
     padding-top: 5px;
     margin-top: 20px;
 }
 .super3section2{
-    /* background-color: gold; */
+    background-color: gold;
+    padding-top: 20px;
+    margin-top: 20px;
 }
 .subsection1{
     background-color: darkgoldenrod;
