@@ -1,0 +1,147 @@
+.header-container{
+    background-color: #000000;
+}
+.header-img{
+    height: 100px;
+    
+}
+.header-menu{
+    float: right;
+    list-style-type: none;
+    padding-right: 50px;
+}
+.header-menu li{
+    float: left;
+    list-style-type: none;
+    padding:  40px 20px 20px 30px;
+    color: white;
+    text-transform: uppercase;
+}
+.header-menu li a{
+    color: white;
+    text-decoration: none;
+}
+.section1-backimg{
+    background-image: url('../images/backimg5.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+     height: 400px;
+    position: relative;
+}
+
+.section1-text{
+    font-size: 50px;
+    color: #fff;   
+    /* text-align: center; */
+    text-transform: uppercase;
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Vidaloka', serif;
+}
+.btn-success{
+
+    border:2px solid #996600;
+    color:#1d1d1d;
+    width: 200px;
+    text-transform: uppercase;
+    background-color:transparent;
+    color:white;
+    font-family: 'Lobster Two', cursive;
+font-family: 'Vidaloka', serif;
+
+}
+.btn-success:hover{
+    background-color: transparent;
+    border-color: #996600;
+    background-color:white;
+    color:black;
+
+}
+.btn-success:focus{
+    border-color: #996600;
+}
+.btn-success:visited{
+    border-color: transparent;
+}
+.main-introduction{
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+.section2-info{
+    text-align: justify;
+    border:1px solid white;
+    box-shadow: 2px 2px 11px lightgrey;   
+     margin-top: 20px;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.background-text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.intro-text{
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Vidaloka', serif;
+}
+.img-container-startup{
+    background-image: url('https://www.inexture.com/wp-content/uploads/2018/11/startup-op_2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+     height: 200px;
+     border-radius: 0 30px 30px 30px;
+     box-shadow: 2px 3px 11px gray;
+ }
+ .img-container-startup1{
+    background-image: url(' https://www.inexture.com/wp-content/uploads/2018/11/fin-tech-op-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+     height: 200px;
+     border-radius: 0 30px 30px 30px;
+     box-shadow: 2px 3px 11px gray;
+ }
+ .img-container-startup2{
+    background-image: url(' https://www.inexture.com/wp-content/uploads/2018/11/m-commerce-industries.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+     height: 200px;
+     border-radius: 0 30px 30px 30px;
+     box-shadow: 2px 3px 11px gray;
+ }
+footer{
+    background-color: #1d1d1d;
+    color:white;
+    margin: 50px;
+}
+.footer-text{
+    margin:20px;
+}
+.footer-p-text{
+}
+.footer-text ul{
+margin-left: 80px;
+}
+.footer-text li{
+    list-style-type: none;
+    padding-left: 10px;
+    padding-top: -4px;
+}
+/* .footer-text li:last-child{
+    padding-left:0;
+} */
+.icon{
+    color:white;
+}
+.footer-text span{
+    padding-left: 10px;
+    text-align: left;
+}
