@@ -1,0 +1,44 @@
+@media(max-width:768px)
+{
+    .header-ul li{
+        padding-left: 10px;
+        padding-bottom : 10px;
+        padding-top:20px;
+        font-size: 12px;
+    }
+    .section1-text{
+        font-size: 30px;
+    }
+    .btn-success{
+        width: 150px;
+    }
+ 
+    /* .section2-info{
+        overflow-y: scroll;
+    } */
+}
+@media (max-width:992px)
+{
+    .information-class .col-md-6{
+        padding-bottom: 20px;
+    }
+    .container-card .col-md-12{
+        padding-bottom: 20px;
+    }
+    /* .section2-info::before{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        content: '';
+        color:white;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .card1::before{
+        background-color:rgba(192, 156, 228, 0.2);
+        padding-bottom: 20px;
+
+    } */
+}

@@ -1,6 +1,12 @@
 .header-container{
     background-color: #000000;
 }
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px ;
+  }
+
 .header-img{
     height: 100px;
     
@@ -22,22 +28,27 @@
     text-decoration: none;
 }
 .section1-backimg{
-    background-image: url('../images/backimg5.jpeg');
+    background-image: url('../images/backimg10.jpeg');
     background-position: center;
     background-repeat: no-repeat;
-    
     background-size: cover;
-     height: 400px;
+     /* height: 1000px; */
     position: relative;
+    height: calc(100vh - 100px);
+    
 }
 
-.section1-text{
+.background-text{
     font-size: 50px;
     color: #fff;   
-    /* text-align: center; */
+    text-align: center;
     text-transform: uppercase;
     font-family: 'Lobster Two', cursive;
     font-family: 'Vidaloka', serif;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .btn-success{
 
@@ -74,8 +85,63 @@ font-family: 'Vidaloka', serif;
     box-shadow: 2px 2px 11px lightgrey;   
      margin-top: 20px;
     border-radius: 4px;
+    /* padding: 10px; */
+    margin-bottom: 50px;
+    height: 100%;
+    background-image: url('../images/backimg10.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.card-image-background{
+height: 100%;
+position: relative;
+padding: 20px;
+font-weight: 500;
+padding-bottom: 0;
+font-size: 18px;
+}
+.section2-info::before{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    color:white;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+.card1::before{
+    background-color:rgba(192, 156, 228, 0.2);
+}
+.card2::before{
+    background-color:rgba(211, 206, 93,0.2);
+}
+.card3::before{
+    background-color:rgba(40, 172, 93,0.2);
+}
+.btn-image{
+    background-color: transparent;
+    border-color: white;
+    width: 100px;
+    color:white;
+}
+
+.section2-info1{
+    text-align: justify;
+    border:1px solid white;
+    box-shadow: 2px 2px 11px lightgrey;   
+     margin-top: 20px;
+    border-radius: 4px;
     padding: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    height: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 .background-text{
     position: absolute;
@@ -96,16 +162,17 @@ font-family: 'Vidaloka', serif;
      height: 200px;
      border-radius: 0 30px 30px 30px;
      box-shadow: 2px 3px 11px gray;
+     margin-bottom: 20px;
  }
  .img-container-startup1{
     background-image: url(' https://www.inexture.com/wp-content/uploads/2018/11/fin-tech-op-2.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    
     background-size: cover;
      height: 200px;
      border-radius: 0 30px 30px 30px;
      box-shadow: 2px 3px 11px gray;
+     margin-bottom:20px;
  }
  .img-container-startup2{
     background-image: url(' https://www.inexture.com/wp-content/uploads/2018/11/m-commerce-industries.png');
@@ -116,23 +183,47 @@ font-family: 'Vidaloka', serif;
      height: 200px;
      border-radius: 0 30px 30px 30px;
      box-shadow: 2px 3px 11px gray;
+     margin-bottom:20px;
+ }
+ .polygon{
+    margin-top: 20px;
+    width: 0;
+border-bottom: 60px solid #6C6;
+border-left: 115px solid transparent;
+border-right: 115px solid transparent;
+ }
+ .polygon-1{
+    width: 228px;
+    height: 111px;
+    background-color: #6C6;
+
+ }
+ .polygon-2{
+    width: 0;
+    border-top: 60px solid #6C6;
+    border-left: 115px solid transparent;
+    border-right: 115px solid transparent;
+ }
+ .footer-container{
+    background-color: #1d1d1d;
+
  }
 footer{
-    background-color: #1d1d1d;
     color:white;
-    margin: 50px;
+    padding: 40px;
+}
+.footer-p-texts{
+    margin-left: 50px;
 }
 .footer-text{
-    margin:20px;
+    float: left;
 }
-.footer-p-text{
-}
-.footer-text ul{
-margin-left: 80px;
+.footer-text1{
+    float: left;
 }
 .footer-text li{
     list-style-type: none;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     padding-top: -4px;
 }
 /* .footer-text li:last-child{
@@ -144,4 +235,20 @@ margin-left: 80px;
 .footer-text span{
     padding-left: 10px;
     text-align: left;
+}
+.polygon-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.image-content{
+    display: inline-block;
+}
+.card-text{
+    display: inline-block;
+    position: absolute;
+    top:0;
+    padding: 10px;
 }
