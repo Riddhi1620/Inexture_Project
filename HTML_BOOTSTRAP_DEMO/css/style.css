@@ -67,10 +67,13 @@ font-family: 'Vidaloka', serif;
     border-color: #996600;
     background-color:white;
     color:black;
+    outline: 0;
+
 
 }
 .btn-success:focus{
     border-color: #996600;
+    outline: none;
 }
 .btn-success:visited{
     border-color: transparent;

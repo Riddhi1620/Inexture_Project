@@ -1,0 +1,8 @@
+@media screen and(max-width:992px) and (min-width:768px){
+    .backimg-text{
+        margin :100px 50px 50px 30px;
+    }
+    .form-container{
+        margin-right:0px;
+    }
+}
