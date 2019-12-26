@@ -1,17 +1,25 @@
 function validateFname(){
     var fname=document.getElementById('fname').value;
-    if(fname =="")
-    document.getElementById('fname-err').innerHTML= 'First name can not be blank';
-    else
+    if(fname ==""){
+         document.getElementById('fname-err').innerHTML= 'First name can not be blank';
+    return false;
+    }
+    else{
     document.getElementById('fname-err').innerHTML= '';
+    return true;
+    }
 
 }
 function validateLname(){
     var fname=document.getElementById('lname').value;
-    if(fname =="")
+    if(fname ==""){
     document.getElementById('lname-err').innerHTML= 'Last name can not be blank';
-    else
-    document.getElementById('lname-err').innerHTML= '';
+    return false;
+    }
+    else{
+        document.getElementById('lname-err').innerHTML= '';
+        return true;
+    }
 
 }
 
@@ -34,12 +42,16 @@ function validateAddress() {
     
     if(count <10){
         document.getElementById('address-err').innerHTML= 'Please Write Atleast 10 characters';
+        return false;
     }
     else if(count > 200){
         document.getElementById('address-err').innerHTML= 'Maximum 200 characters are allowed';
+        return false;
     }
-    else
-    document.getElementById('address-err').innerHTML= '';
+    else{
+        document.getElementById('address-err').innerHTML= ' ';
+        return true;
+    }
 
 }
 function validatePhone(){
@@ -48,14 +60,17 @@ function validatePhone(){
 
      if(isNaN(trimmed_phone_no)){
         document.getElementById('phone-err').innerHTML= 'Please enter only  digit';
+        return false;
 
     }
      else if(trimmed_phone_no.length !=10){
         document.getElementById('phone-err').innerHTML= 'Please Write atleast 10 digit';
+        return false;
     }
     
     else{
-        document.getElementById('phone-err').innerHTML= '';
+        document.getElementById('phone-err').innerHTML= ' ';
+        return true;
 
     }
 }
@@ -74,6 +89,7 @@ function validatePhone(){
         if(passwordarray.length < 8)
         {
             document.getElementById('password-err').innerHTML= 'Please Write atleast 8 Characters';
+            return false;
         }
         else{
 
@@ -102,7 +118,7 @@ function validatePhone(){
                 }
                 else
                 {
-                    msg='';
+                    msg=' ';
                 }
             }
             if(capflag==false)
@@ -115,6 +131,10 @@ function validatePhone(){
                 msg+= 'Enter atleast 1 special character';
                 document.getElementById('password-err').innerHTML=msg;
 
+                if(capflag!=false && smallflag!=false && digitflag!=false && speflag !=false)
+                    return true;
+                else
+                return false;
 
         }
      }
@@ -131,10 +151,12 @@ function validatePhone(){
         if(password !=cpassword)
         {
             document.getElementById('cpassword-err').innerHTML= 'Password and Conform password must be same';
+            return false;
 
         }
         else    
-            document.getElementById('cpassword-err').innerHTML= '';
+            document.getElementById('cpassword-err').innerHTML= ' ';
+            return true;
 
     }
     function validateEmail()
@@ -144,7 +166,7 @@ function validatePhone(){
         var namemsg=false;
         var sldemsg=false;
         var tldmsg=false;
-        var emailmsg='';
+        var emailmsg=' ';
         // alert(email1phase[0].length);
         if(email1phase[0].length < 3)
         {
@@ -174,7 +196,10 @@ function validatePhone(){
           emailmsg +='top level domain must be atleast 2 characters  ';
 
         document.getElementById('email-err').innerHTML=emailmsg;
-
+        if(namemsg!=true && sldemsg!=true && tldmsg!=true)
+            return true;
+            else
+            return false;
 
         }
     function validateFile(){
@@ -183,6 +208,35 @@ function validatePhone(){
         var extension = file.files[0].type.split('/');
         document.getElementById('file-err').innerHTML= "Name:"+file.files[0].name +"  Extension:"+extension[1]+"   size:"+file.files[0].size +" bytes";
         // alert(file.files[0].name);
+    }
+
+
+    function enableButton(){
+//         var fname=document.getElementById('fname-err').value;
+//         var lname=document.getElementById('lname-err').value;
+//         var address=document.getElementById('address-err').value;
+//         var pwd=document.getElementById('password-err').value;
+//         var cpwd=document.getElementById('cpassword-err').value;
+//         var file=document.getElementById('file-err').value;
+//         var phoneno=document.getElementById('phone-err').value;
+//         var email=document.getElementById('email-err').value;
+// console.log(fname);
+// console.log(lname);
+// console.log(pwd);
+// console.log(cpwd);
+// console.log(address);
+// console.log(phoneno);
+// console.log(email);
+
+//       if(fname!='' && lname != '' && address!='' && pwd!='' && cpwd!='' && phoneno!='' && email!='')
+//             document.getElementById('submit').disabled=true;
+//         else
+//         document.getElementById('submit').disabled=false;
+
+        if(validateFname() && validateLname() && validatePassword() && validateCpassword() && validatePhone() && validateEmail())
+                     document.getElementById('submit').disabled=false;
+
 
     }
+    
 
