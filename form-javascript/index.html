@@ -18,8 +18,8 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4">
+                <div class="col-2"></div>
+                <div class="col-8">
                     <div class="form-container text-center">
                         <form action="" onsubmit="validate();">
                             <div class="form-group">
@@ -63,10 +63,11 @@
                                   <input type="radio" class="form-check-input" name="optradio">Female
                                 </label>
                               </div>
-                            <div class="form-group">
+                            <div class="custom-file" style="margin-bottom: 30px; margin-top: 20px;">
                                 <!-- <label> File:</label>  -->
-                                <input type="file" class="form-control" id="file" placeholder="File"  onchange="validateFile();">
-                                <label for="" id="file-err"></label>
+                                <input type="file" class="custom-file-input" id="file" placeholder="File"  onchange="validateFile();">
+                                <label class="custom-file-label" for="customFile" id="file-err">Choose file</label>
+                                <!-- <label for="" ></label> -->
 
                             </div>
                             <div class="form-group">
@@ -78,7 +79,7 @@
                             <div class="form-group">
                                 <!-- <label> Email:</label>  -->
                                 <input type="email" class="form-control" id="email" placeholder="Email" onblur="validateEmail();">
-                                <label for="" id="email-err"></label>
+                                <label for="" id="email-err">  </label>
 
                             </div>
                             <div class="form-group">
@@ -87,7 +88,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-4"></div>
+                <div class="col-2"></div>
 
             </div>
         </div>
