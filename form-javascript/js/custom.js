@@ -1,4 +1,21 @@
-function validate() {
+function validateFname(){
+    var fname=document.getElementById('fname').value;
+    if(fname =="")
+    document.getElementById('fname-err').innerHTML= 'First name can not be blank';
+    else
+    document.getElementById('fname-err').innerHTML= '';
+
+}
+function validateLname(){
+    var fname=document.getElementById('lname').value;
+    if(fname =="")
+    document.getElementById('lname-err').innerHTML= 'Last name can not be blank';
+    else
+    document.getElementById('lname-err').innerHTML= '';
+
+}
+
+function validateAddress() {
     var address = document.getElementById('address').value;
 
      var addrssarray=Array.from(address);
@@ -124,27 +141,42 @@ function validatePhone(){
     {
         var email = document.getElementById('email').value;
         var email1phase = email.split('@');
+        var namemsg=false;
+        var sldemsg=false;
+        var tldmsg=false;
+        var emailmsg='';
         // alert(email1phase[0].length);
         if(email1phase[0].length < 3)
         {
-            document.getElementById('email-err').innerHTML= 'name must be atleast 3 characters';
+            // emailmsg +='name must be atleast 3 characters';
+            namemsg=true;
         }
-        else{   
-            document.getElementById('email-err').innerHTML= '   ';
-
-        }
+       
+        // document.getElementById('email-err').innerHTML=emailmsg;
         var email2phase = email1phase[1].split('.');
         // alert(email2phase);
         if(email2phase[0].length <3)
         {
-            document.getElementById('email-err').innerHTML= 'company name must be atleast 3 characters';
+            sldemsg=true;
+            // document.getElementById('email-err').innerHTML= 'company name must be atleast 3 characters';
         }
         if(email2phase[1].length <2)
         {
-            document.getElementById('email-err').innerHTML= 'Domain name must be atleast 2 characters';
+            tldmsg=true;
+            // document.getElementById('email-err').innerHTML= 'Domain name must be atleast 2 characters';
 
         }
-    }
+        if(namemsg==true)
+            emailmsg +='name must be atleast 3 characters  ';
+        if(sldemsg==true)
+           emailmsg +='second level domain must be atleast 3 characters  ';
+        if(tldmsg==true)
+          emailmsg +='top level domain must be atleast 2 characters  ';
+
+        document.getElementById('email-err').innerHTML=emailmsg;
+
+
+        }
     function validateFile(){
         // alert('hi');
         var file = document.getElementById('file');

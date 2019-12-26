@@ -24,15 +24,17 @@
                         <form action="" onsubmit="validate();">
                             <div class="form-group">
                                 <!-- <label> First Name:</label>  -->
-                                <input type="text" class="form-control" id="fname"  placeholder="First Name" required>
+                                <input type="text" class="form-control" id="fname"  placeholder="First Name" onblur="validateFname();">
+                                <label for="" id="fname-err"></label>
                             </div>
                             <div class="form-group">
                                 <!-- <label> Last Name:</label>  -->
-                                <input type="text" class="form-control" id="lname"  placeholder="Last Name" required>
+                                <input type="text" class="form-control" id="lname"  placeholder="Last Name" onblur="validateLname();">
+                                <label for="" id="lname-err"></label>
                             </div>
                             <div class="form-group">
                                 <!-- <label> Address:</label>  -->
-                                <textarea name="Address" id="address" cols="30" rows="5" class="form-control"  onblur="validate();" placeholder="Address"></textarea>
+                                <textarea name="Address" id="address" cols="30" rows="5" class="form-control"  onblur="validateAddress();" placeholder="Address"></textarea>
                                 <label for="" id="address-err"></label>
                             </div>
                             <div class="form-group">
@@ -53,7 +55,7 @@
                               </div>
                             <div class="form-check-inline">
                                 <label class="form-check-label">
-                                  <input type="radio" class="form-check-input" name="optradio">Male
+                                  <input type="radio" class="form-check-input" name="optradio" checked>Male
                                 </label>
                               </div>
                               <div class="form-check-inline">
