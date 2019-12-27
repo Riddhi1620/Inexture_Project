@@ -1,8 +1,75 @@
-@media screen and(max-width:992px) and (min-width:768px){
+@media   (max-width:992px) and (min-width:768px){
     .backimg-text{
-        margin :100px 50px 50px 30px;
+        padding :40px 50px 50px 20px;
+        margin-top:150px;
     }
     .form-container{
-        margin-right:0px;
+        margin-top:50px;
+        margin-right:100px;
     }
+    .backimg-large-text{
+        font-size: 25px;
+    }
+    .social-media{
+       margin-bottom:0px;
+       margin-left:20px;
+    }
+    .social-media-dummy-text{
+        font-size:12px;
+    }
+    .icon-container span{
+        font-size: 36px;
+        padding-right:20px;
+        padding-top:20px;
+    }
+   .accordian{
+       margin-top:50px;
+       margin-left:0px;
+       padding-left:0;  
+   }
+   .accordian-tab{
+       height:90px;
+       width:90px;
+       margin-left:20px;
+   }
+   .accordian-display{
+       margin-left:20px;
+   }
+   .accordian-header-display{
+       margin:50px 0px 30px 0;
+       font-size: 18px;
+   }
+   .accordian-text{
+       font-size: 14px;
+   }
+   .accordian-display-btn{
+       margin-top:10px;
+   }
+   .image-right-text{
+       margin-left:20px;
+   }
+   .image-small-text{
+       font-size:14px;
+   }
+   .wrap-content1{
+       font-size:14px;
+   }
+   .form-text1{
+       width:300px!important;
+   }
+   .form-container2{
+       float:right;
+
+   }
+   
+   .text-area{
+       width:300px;
+       /* padding-left:50px; */
+       margin-right: 0px;
+       margin-bottom: 10px;
+   }
+   .form-text2{
+       width:300px;
+       margin-left: 30px;
+   }
 }
