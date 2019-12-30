@@ -1,0 +1,27 @@
+@media(max-width:992px)
+{
+    .email{
+        width: 100%;
+    }
+    .form-wrap{
+        display: block;
+    }
+    .phone{
+        margin-left: 0px!important;
+    }
+    .grid-item {
+        width: 45%;
+    }
+}
+@media(max-width:575px)
+{
+    .send-now-btn{
+        margin-top: 80px!important;
+    }
+    .text-content{
+        padding-bottom: 0px;
+    }
+    .grid-item{
+        width: 100%;
+    }
+}
