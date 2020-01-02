@@ -101,9 +101,13 @@ html{
     font-size: 50px;
 
 }
+.nav-link{
+    padding:30px 30px 30px 35px!important;
+    border-radius: 2px;
+}
 #a-home.active{
     background-color: #74c7d5;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     /* height: 95px; */
 }
 #a-service.active{
