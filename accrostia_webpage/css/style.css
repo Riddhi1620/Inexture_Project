@@ -104,6 +104,7 @@ html{
 #a-home.active{
     background-color: #74c7d5;
     padding-top: 10px;
+    /* height: 95px; */
 }
 #a-service.active{
     background-color: #df5c64;
@@ -204,6 +205,12 @@ background-color: #91788e;
     /* height: 100%; */
     padding:100px 0;
 }   
+.about-container{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.about-container:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+}
 .about-container:hover .make-round-aboutus{
     background-color:#df5c64 ;
 }
