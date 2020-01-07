@@ -116,63 +116,76 @@ function validatePhone(){
     }
 }
     function validatePassword(){
-        var passwordarray=Array.from(password.value);
-        var i;
-        var msg ='';
-        var capflag=false;
-        var smallflag=false;
-        var digitflag=false;
-        var speflag=false;
-        if(passwordarray.length < 8)
+
+
+        var pwdregex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
+        if(password.value.match(pwdregex))
         {
+            document.getElementById('password-err').innerHTML= '';
+            return true;
+        } 
+        else{
             document.getElementById('password-err').innerHTML= 'Please Write atleast 8 Characters';
             return false;
         }
-        else{
 
-            for(i=0;i<passwordarray.length;i++)
-             {
-                if( passwordarray[i] >='A' && passwordarray[i] <='Z')
-                {
-                    capflag=true;
-                }
+        // var passwordarray=Array.from(password.value);
+        // var i;
+        // var msg ='';
+        // var capflag=false;
+        // var smallflag=false;
+        // var digitflag=false;
+        // var speflag=false;
+        // if(passwordarray.length < 8)
+        // {
+        //     document.getElementById('password-err').innerHTML= 'Please Write atleast 8 Characters';
+        //     return false;
+        // }
+        // else{
 
-                else if( passwordarray[i] >='a' && passwordarray <='z')
-                {
-                    smallflag=true;
-                }
+        //     for(i=0;i<passwordarray.length;i++)
+        //      {
+        //         if( passwordarray[i] >='A' && passwordarray[i] <='Z')
+        //         {
+        //             capflag=true;
+        //         }
+
+        //         else if( passwordarray[i] >='a' && passwordarray <='z')
+        //         {
+        //             smallflag=true;
+        //         }
             
-                else if( passwordarray[i] >= '0' && passwordarray[i] <= '9')
-                {
-                    digitflag=true;
-                }
-                else if(specialchar.includes(passwordarray[i])==true){
-                    speflag=true;
-                }
-                else
-                {
-                    msg=' ';
-                }
-            }
-            if(capflag==false)
-                msg += 'Enter atleast 1 capital letter';
-            if(smallflag==false)
-            msg+= 'Enter atleast 1 small letter';
-            if(digitflag==false)
-                msg+= 'Enter atleast 1 digit ';
-                if(speflag==false)
-                msg+= 'Enter atleast 1 special character';
-                document.getElementById('password-err').innerHTML=msg;
+        //         else if( passwordarray[i] >= '0' && passwordarray[i] <= '9')
+        //         {
+        //             digitflag=true;
+        //         }
+        //         else if(specialchar.includes(passwordarray[i])==true){
+        //             speflag=true;
+        //         }
+        //         else
+        //         {
+        //             msg=' ';
+        //         }
+        //     }
+        //     if(capflag==false)
+        //         msg += 'Enter atleast 1 capital letter';
+        //     if(smallflag==false)
+        //     msg+= 'Enter atleast 1 small letter';
+        //     if(digitflag==false)
+        //         msg+= 'Enter atleast 1 digit ';
+        //         if(speflag==false)
+        //         msg+= 'Enter atleast 1 special character';
+        //         document.getElementById('password-err').innerHTML=msg;
 
-                if(capflag!=false && smallflag!=false && digitflag!=false && speflag !=false){
-                    password_flag=true;
-                    return true;
-                }
-                else{
-                    password_flag=false;
-                    return false;
-                }
-        }
+        //         if(capflag!=false && smallflag!=false && digitflag!=false && speflag !=false){
+        //             password_flag=true;
+        //             return true;
+        //         }
+        //         else{
+        //             password_flag=false;
+        //             return false;
+        //         }
+        // }
      }
     
     function validateCpassword(){
@@ -198,69 +211,84 @@ function validatePhone(){
     }
     function validateEmail()
     {
-        var namemsg=false;
-        var sldemsg=false;
-        var tldmsg=false;
-        var emailmsg="";
-        var i;
-        var email_array=Array.from(email.value);
-        var email_flag=false;
-        for(i=0;i<email_array.length;i++)
+        // var namemsg=false;
+        // var sldemsg=false;
+        // var tldmsg=false;
+        // var emailmsg="";
+        // var i;
+        // var email_array=Array.from(email.value);
+        // var email_flag=false;
+
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(email.value.match(mailformat))
         {
-            if((email_array[i]<'A' && email_array[i]>'Z') || (email_array[i]<'a' && email_array[i]>'z') || (email_array[i]<0 && email_array[i]>9) || (special_email_char.includes(email_array[i])))
-            {
-                email_flag=true;
-            }
+        document.getElementById('email-err').innerHTML="";
+        return true;
         }
-        
-        if(email.value.length ==0)
-        {
-            emailmsg+="Email can not be blank ";
-        }
-
-        else{
-
-            var email1phase = email.value.split('@');
-
-            if(email1phase.length == 2){
-                if(email1phase[0].length < 3)
-                {
-                    namemsg=true;   
-                }
-                var email2phase = email1phase[1].split('.');
-            
-                if(email2phase.length >= 2){
-                    if(email2phase[0].length<3)
-                    {
-                        sldemsg=true;
-                    }
-                    if(email2phase[1].length <2)
-                    {
-                        tldmsg=true;
-                    }
-                    if(namemsg==true)
-                        emailmsg +='name must be atleast 3 characters     ';
-                    if(sldemsg==true)
-                        emailmsg +='second level domain must be atleast 3 characters    ';
-                    if(tldmsg==true)
-                        emailmsg +='top level domain must be atleast 2 characters    ';
-                }
-                else{
-                    email_flag=true;
-                }
-            }
-            else{
-                
-                email_flag=true;
-            }
-        }
-        if(email_flag==true)
-            emailmsg+="Email not valid   ";
-        document.getElementById('email-err').innerHTML=emailmsg;
-        if(namemsg!=true && sldemsg!=true && tldmsg!=true)
-            return true;
         else
-            return false;
+        {
+            document.getElementById('email-err').innerHTML="You have entered an invalid email address!";
+        return false;
+        }
+
+
+
+        // for(i=0;i<email_array.length;i++)
+        // {
+        //     if((email_array[i]<'A' && email_array[i]>'Z') || (email_array[i]<'a' && email_array[i]>'z') || (email_array[i]<0 && email_array[i]>9) || (special_email_char.includes(email_array[i])))
+        //     {
+        //         email_flag=true;
+        //     }
+        // }
+        
+        // if(email.value.length ==0)
+        // {
+        //     emailmsg+="Email can not be blank ";
+        // }
+
+        // else{
+
+        //     var email1phase = email.value.split('@');
+
+        //     if(email1phase.length == 2){
+        //         if(email1phase[0].length < 3)
+        //         {
+        //             namemsg=true;   
+        //         }
+        //         var email2phase = email1phase[1].split('.');
+            
+        //         if(email2phase.length >= 2){
+        //             if(email2phase[0].length<3)
+        //             {
+        //                 sldemsg=true;
+        //             }
+        //             if(email2phase[1].length <2)
+        //             {
+        //                 tldmsg=true;
+        //             }
+        //             if(namemsg==true)
+        //                 emailmsg +='name must be atleast 3 characters     ';
+        //             if(sldemsg==true)
+        //                 emailmsg +='second level domain must be atleast 3 characters    ';
+        //             if(tldmsg==true)
+        //                 emailmsg +='top level domain must be atleast 2 characters    ';
+        //         }
+        //         else{
+        //             email_flag=true;
+        //         }
+        //     }
+        //     else{
+                
+        //         email_flag=true;
+        //     }
+        // }
+        // if(email_flag==true)
+        //     emailmsg+="Email not valid   ";
+        // document.getElementById('email-err').innerHTML=emailmsg;
+        // if(namemsg!=true && sldemsg!=true && tldmsg!=true)
+        //     return true;
+        // else
+        //     return false;
     
 
         }
@@ -286,6 +314,4 @@ function validatePhone(){
             document.getElementById('submit').disabled=false;
         else
         document.getElementById('submit').disabled=true;
-
-
     }       
